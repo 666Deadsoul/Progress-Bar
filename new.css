@@ -17,7 +17,7 @@ body{
     position: relative;
     border-radius:50% ;
     color: white;
-    background-color: black;
+    background:gray linear-gradient(to right,transparent 50%, black 0);
 }
 .container .progress h3 {
     position: absolute;
@@ -55,9 +55,15 @@ body{
     position: absolute;
     inset: 10px;
     border-radius: 50%;
-    background-color: aliceblue;
+    background-color:cadetblue;
 }
 .container .progress::before{
     background-color: var(--clr);
-    transform: rotate(calc(((var(--i)-50)* 0.001turn)));
+    transform: rotate(calc((var(--i) - 50) * 0.01turn));
 }
+
+.container .progress.less::before{
+    background-color: black;
+    transform: rotate(calc((var(--i) - 0) * 0.01turn));
+}
+
