@@ -44,13 +44,15 @@ body{
     text-transform: uppercase;
 }
 
-.container .progress ::before{
+.container .progress::before{
     content: '';
     display: block;
     height: 100%;
     margin-left: 50%;
     transform-origin: left;
     border-radius: 0 100% 100% 0/50%;
+    background-color: var(--clr);
+    transform: rotate(calc(((var(--i) - 50) * 0.01turn)));
 }
 .container .progress::after{
     content: '';
@@ -59,13 +61,9 @@ body{
     border-radius: 50%;
     background-color:#222;
 }
-.container .progress::before{
-    background-color: var(--clr);
-    transform: rotate(calc(((var(--i) - 50) * 0.01turn)));
-}
 
 .container .progress.less::before{
-    background-color: black;
+    background-color: gray;
     transform: rotate(calc(((var(--i) - 0) * 0.01turn)));
 }
 
